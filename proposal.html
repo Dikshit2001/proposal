@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .message-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hidden-message {
+            color: #ffffff;
+            user-select: none;
+        }
+        .reveal-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .reveal-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>Hey Love,</h1>
+        <p class="hidden-message" id="hiddenMsg">This is a tricky message...</p>
+        <button class="reveal-button" onclick="revealMessage()">Reveal the Truth</button>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('hiddenMsg').style.color = 'black';
+            document.getElementById('hiddenMsg').innerText = 'Will you marry me? ❤';
+        }
+    </script>
+</body>
+</html>
